@@ -4,8 +4,8 @@ defmodule TphxWeb.ProductController do
   alias Tphx.Products
   alias Tphx.Products.Product
 
-  alias Tphx.Accounts.User
-  alias Tphx.Accounts.Role
+  #alias Tphx.Accounts.User
+  #alias Tphx.Accounts.Role
   alias Tphx.Accounts.RoleChecker
 
 
@@ -74,7 +74,7 @@ defmodule TphxWeb.ProductController do
       conn
     else
       conn
-      |> put_flash(:error, "You are not authorized to create new users!")
+      |> put_flash(:error, "You are not authorized to create new product!")
       |> redirect(to: Routes.page_path(conn, :index))
       |> halt()
     end
